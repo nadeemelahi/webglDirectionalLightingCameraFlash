@@ -17,12 +17,12 @@ canvas { width: 100%; height: 100%;
 <canvas width="400" height="400"></canvas>
 
 <script id="vertex-shader-2d" type="x-shader/x-fragment">
-attribute vec3 vert; 
+attribute vec4 vert; 
 attribute vec3 colour;
 varying vec3 vcolour;
 void main(void){
 	
-	gl_Position =  vec4( vert , 1.0 ) ;
+	gl_Position =  vert ;
 	vcolour = colour;
 }
 </script><script id="fragment-shader-2d" type="x-shader/x-fragment">
