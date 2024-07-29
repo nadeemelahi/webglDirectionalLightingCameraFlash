@@ -173,7 +173,7 @@ function dotProduct( norm , light ) {
 
 	var dotp = norm.x * light.x
 		+ norm.y * light.y
-		+ norm.z * norm.z 
+		+ norm.z * light.z 
 	;
 
 	// cos ( angle )
@@ -186,7 +186,7 @@ function dotProduct( norm , light ) {
 // directional lighting, 
 // straight on camera flash light, 
 // into the page, ie) -z, or <0,0,-1>
-var dlight = { x: 0 , y: 0 , z: -1} ,
+var dlight = { x: 0 , y: 0 , z: 1} ,
 	minLight = 0.2 ,
 	lightFactor ;
 
